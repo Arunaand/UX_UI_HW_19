@@ -42,7 +42,18 @@ body {
   background-color: silver;
 }
 
+/* new accordian on resume */
+#panel, #flip {
+  padding: 5px;
+  text-align: center;
+  background-color: tan;
+  border: solid 1px #c3c3c3;
+}
 
+#panel {
+  padding: 50px;
+  display: none;
+}
 .casestudy1, .casestudy2, .casestudy3, .casestudy4, .casestudy5 {
     
     background-position: center;
@@ -537,6 +548,34 @@ p {
     flex: 1;
     }
     
+    /* Animation on main page */
+    @bg: #2d2d37; // Dark blue
+@primary: #fd6b21; // Orange
+
+body { background: @bg;}
+a { color: white; text-decoration: none; }
+
+.arrow {
+  text-align: center;
+  margin: 8% 0;
+}
+.bounce {
+  -moz-animation: bounce 2s infinite;
+  -webkit-animation: bounce 2s infinite;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
     /*.flex-container--long{
       background-color: blueviolet;
       flex: 3

@@ -10,7 +10,14 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="css/index.css">
     <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script> 
+    $(document).ready(function(){
+      $("#flip").click(function(){
+        $("#panel").slideDown("slow");
+      });
+    });
+    </script>
     
        <title>Aruna Andrew's Profile</title>
        <link rel="stylesheet" type="text/css" href="css/styles.css">
@@ -67,8 +74,33 @@
 
 </section>
         <br>
+
+        <!--accordian2-->
+        <div class="arrow bounce">
+          <a class="fa fa-arrow-down fa-2x" href="#"></a></div>
+        <div id="flip"><h3>Additional Skills</h3>
+        </div>
+        <div id="panel"><p><h1>Technical Skills</h1></p>
+          <p><h3>Phone Skills, Trello, Payment Processing</h3>
+            .</p>
+            <p><h1>Hard Skills</h1></p>
+            <p><h3>MS Office, Spreadsheet, UX Design</h3></p>
+            <p><h1>Soft Skills</h1></p>
+            <p><h3>Time Management, Communication, Problem-Solving, Team Work, Leadership, Customer Service</h3></p>
+            <p><h1>Research Skills</h1></p>
+            <p><h3>Competitive Analysis, UX Research, Interviewing, Note Taking, User Interviews, Sketching, Wireframing, Prototyping, Iterating </h3></p>
+            <p><h1>Educational Skills</h1></p>
+            <p><h3>Classroom Management, Record Keeping, Lesson Planning, Presentation Skills, Scheduling</h3></p>
+        </div>
+        </div>
+          </div>
+
+
+
         <!--accordian-->
-        <div class="w3-container">
+
+        
+        <!--<div class="w3-container">
 
           <h1>Additional Skills</h1>
           <button onclick="myFunction('Demo1')" class="w3-button w3-block w3-pink w3-left-align"><h2>Technical, Hard and Soft Skills:</h2></button>
@@ -80,8 +112,13 @@
                 <p><h3>MS Office, Spreadsheet, UX Design</h3></p>
                 <p><h1>Soft Skills</h1></p>
                 <p><h3>Time Management, Communication, Problem-Solving, Team Work, Leadership, Customer Service</h3></p>
+                <p><h1>Research Skills</h1></p>
+              <p><h3>Competitive Analysis, UX Research, Interviewing, Note Taking, User Interviews, Sketching, Wireframing, Prototyping, Iterating </h3></p>
+              <p><h1>Educational Skills</h1></p>
+              <p><h3>Classroom Management, Record Keeping, Lesson Planning, Presentation Skills, Scheduling</h3></p>
           </div>
-          
+          </div>
+          </div>
           <button onclick="myFunction('Demo2')" class="w3-button w3-block w3-lightpink w3-left-align"><h2>Research and Educational Skills:</h2></button>
           <div id="Demo2" class="w3-hide w3-container">
               <p><h1>Research Skills</h1></p>
@@ -106,7 +143,7 @@
               x.previousElementSibling.className.replace("w3-brown", "w3-silver");
             }
           }
-          </script>
+          </script>-->
           <section>
             <h1>My Resume</h1>
      <p><p>UX designer with a background in graphic design, trained at the University of Texas UX/UI program. As a graphic designer, led a team to successfully meet branding and technical requirements for various projects, including websites/landing pages, logos, email campaigns, and social media content creation. Strengths lie in defining and executing design strategies built on a deep understanding of user and business needs. Specializing in user research, usability testing, information architecture, and interaction design, to create interfaces that bring users joy and increase brand loyalty.</p></p>
