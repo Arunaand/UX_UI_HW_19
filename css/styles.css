@@ -42,18 +42,7 @@ body {
   background-color: silver;
 }
 
-/* new accordian on resume */
-#panel, #flip {
-  padding: 5px;
-  text-align: center;
-  background-color: tan;
-  border: solid 1px #c3c3c3;
-}
 
-#panel {
-  padding: 50px;
-  display: none;
-}
 .casestudy1, .casestudy2, .casestudy3, .casestudy4, .casestudy5 {
     
     background-position: center;
@@ -180,7 +169,7 @@ p {
       }
       
       h1 {
-        font-size: 50px;
+        font-size: 40px;
         word-break: break-all;
       }
       
@@ -290,28 +279,32 @@ p {
       }
 
       /* About Me hero space */
+/* jumotron- about me */
+.jumbotron {
+  position: relative;
+  background: url("../images/LostLake.jpeg");
+  background-size: cover;
+}
 
-      .hero {
-        position: relative;
-     }
+.jumbotron > .overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: "/images/LostLake.jpeg";
+  /*background-color: rgba(255, 132, 230, 0.85);*/
+  z-index: 1;
+}
+
+.jumbotron > .inner {
+  position: relative;
+  z-index: 2;
+}
+      
      
-     .hero-overlay {
-       text-align: center;
-       position: absolute;
-       z-index: 0; /* do not remove. it keeps pic intact */
-       width: 100%;
-       h1 {
-         /*font-size: 6vw;*/
-         transform: translateY(6vw);/* keeps h1 in position */
-         color: red; 
-         /*letter-spacing: 0.45rem;*/
-         font-weight: 700;
-       }
-     }
-     
-     .hero-image {
-       display: block;
-        /*//overflow: visible;*/
+.hero-image {
+  display: block;/* needed for jumbotron image */
        z-index:-1;
        margin-left: auto;
        margin-right: auto;
@@ -322,14 +315,16 @@ p {
        padding: 3rem;
        &:last-of-type {
          padding-top: 0;
+         font-weight: 600;
        }
      }
      
      div, p {
        font-family: Arial, Helvetica, sans-serif;
        text-rendering: optimizeLegibility;
-     }
-      /* hero space */
+     }*/
+      /* hero space/jumbotron */
+
       /* about me */
       img.sticky {
         position: -webkit-sticky;
@@ -354,33 +349,101 @@ p {
     background-color:  rgb(155, 155, 139);
   }
 }
+
 /* end @media rule */
 
-/* my skills on Resume */
-.container1 {
-  border: 1px dashed white; 
-  width: max; 
-  height: 50px;
-  }
-
-.container { 
-  border: 1px dashed white; 
-  width: 750px; 
-  height: 750px;
-  }
-
-.outer-container{
-  display: flex;  
-  flex-direction: row;   
-  
+/* Resume */
+/* accordian v2 */
+bodyAccordian {
+  background-color: #FFF8F2;
+  color: #373539;
+  font-family: 'Montserrat', sans-serif;
 }
 
-.container2 {
-  
-  border: 1px dashed white; 
-  width: 750px; 
-  height: 750px;
+.containerAccordian {
+ padding: 200px;
+}
+
+.faq-drawer {
+  margin-bottom: 30px;
+}
+
+.faq-drawer__content-wrapper {
+  font-size: 1.25em;
+  line-height: 1.4em;
+  max-height: 0px;
+  overflow: hidden;
+  transition: 0.25s ease-in-out;
+}
+
+.faq-drawer__title {
+  border-top: #000 1px solid;
+  cursor: pointer;
+  display: block;
+  font-size: 1.25em;
+  font-weight: 700;
+  padding: 30px 0 0 0;
+  position: relative;
+  margin-bottom: 0;
+  transition: all 0.25s ease-out;
+}
+
+.faq-drawer__title::after {
+  border-style: solid;
+  border-width: 1px 1px 0 0;
+  content: " ";
+  display: inline-block;
+  float: right;
+  height: 10px;
+  left: 2px;
+  position: relative;
+  right: 20px;
+  top: 2px;
+  transform: rotate(135deg);
+  transition: 0.35s ease-in-out;
+  vertical-align: top;
+  width: 10px;
+}
+
+/* OPTIONAL HOVER STATE */
+.faq-drawer__title:hover { 
+  color: #4E4B52  ;
+}
+
+.faq-drawer__trigger:checked
+  + .faq-drawer__title
+  + .faq-drawer__content-wrapper {
+  max-height: 350px;
+}
+
+.faq-drawer__trigger:checked + .faq-drawer__title::after {
+  transform: rotate(-45deg);
+  transition: 0.25s ease-in-out;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .containerAccordian {
+    padding: 80px;
   }
+}
+
+/* new accordian on resume 
+#panel, #flip {
+  padding: 5px;
+  text-align: center;
+  background-color: tan;
+  border: solid 1px #c3c3c3;
+}
+
+#panel {
+  padding: 50px;
+  display: none;
+}*/
+
 /* container try */
 
   
@@ -472,6 +535,15 @@ p {
   border: solid;
   margin: 1px;
 }	
+/* responsive flexbox ux skills resume */
+
+
+
+
+
+
+
+
 /* alternate contact form 
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,600);
 
