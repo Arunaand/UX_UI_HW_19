@@ -1,5 +1,9 @@
 /* Navigation styles */
-body {margin: 0;}
+body {
+  margin: 0;
+  padding: 0;
+}
+/*body {margin: 0;}*/
 
 ul.topnav {
   list-style-type: none;
@@ -26,10 +30,32 @@ ul.topnav li a.active {background-color: gray;}
 ul.topnav li.right {float: right;}
 
 @media screen and (max-width: 600px) {
+  body {
+    margin: 0;
+    padding: 0;
+ }
   ul.topnav li.right, 
-  ul.topnav li {float: none;}
+  ul.topnav li {float: none;} 
+  .containerAccordian {
+    padding: 80px;
+  }
+  .column, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+  body {
+    background-color:  rgb(155, 155, 139);
 }
-
+.footer {
+  background-color:  rgb(155, 155, 139);
+}
+.jumbotron {
+  margin: 0px;
+}
+.myDiv {
+  margin: 0px;
+}
+} /*media ends*/
 .left, .center, .right {
     height: 50px;
     display: flex;
@@ -43,6 +69,59 @@ body {
 }
 
 
+.casestudy1, .casestudy2, .casestudy3, .casestudy4, .casestudy5 {
+    
+    background-position: center;
+    height: 200px;
+    max-width: 200px;
+    margin: auto;
+    margin-bottom: 10px;
+    background-color: blue;
+    border-radius: 40px;
+    background-image: url("../images/casestudy1.png");
+}
+
+.casestudy1 {
+    /*margin-top:20px;*/
+    background-image: url("../images/casestudy1.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    /*border-radius: 48px;*/
+}
+
+.casestudy2 {
+    background-image: url("../images/casestudy2.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.casestudy3 {
+    background-image: url("../images/casestudy3.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.caseStudyPortfolio {
+    background-position: center;
+    height: 500px;
+    max-width: 500px;
+    margin: auto;
+    margin-bottom: 10px;
+    background-color: blue;
+    border-radius: 48px;
+    background-image: url("../images/casestudy3.png");
+
+}
+.text {
+    background: rgb(0,0,0,0.7);
+    width: 84%;
+    padding: 20px 40px;
+    color: brown;
+}
+
+.text p {
+    color: rgba(255, 255, 255, 0.7);
+    font-family: Arial, Helvetica, Arial, Helvetica, sans-serif;
+}
 
 
 /*About page*/
@@ -138,10 +217,8 @@ p {
       /* portfolio cards */
       .myDiv {
         border: 1px outset brown;
-        background-color: white;  
-          
-        /*text-align: center;*/
-
+        background-color: white;    
+        text-align: center;
       }
       
       /* Content */
@@ -220,12 +297,7 @@ p {
       }
       
       /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
-      @media screen and (max-width: 600px) {
-        .column, input[type=submit] {
-          width: 100%;
-          margin-top: 0;
-        }
-      }
+      
 
       /* About Me hero space */
 /* jumotron- about me */
@@ -288,19 +360,7 @@ p {
         top: 0;
         width: 200px;
       }
-/* @media rule */
-@media only screen and (max-width: 600px) {
-  body {
-    background-color:  rgb(155, 155, 139);
-}
-}
-@media only screen and (max-width: 600px) {
-  .footer {
-    background-color:  rgb(155, 155, 139);
-  }
-}
 
-/* end @media rule */
 
 /* Resume */
 /* accordian v2 */
@@ -375,11 +435,6 @@ input[type="checkbox"] {
   display: none;
 }
 
-@media only screen and (max-width: 600px) {
-  .containerAccordian {
-    padding: 80px;
-  }
-}
 
 /* new accordian on resume 
 #panel, #flip {
@@ -470,9 +525,6 @@ input[type="checkbox"] {
   z-index: 20;
 }
 
-/*contact form */
-
-/*form ends*/
 /* footer contact text */
 .contact {
   color: black;
